@@ -4,6 +4,7 @@
 #include <compare>
 #include <cstdio>
 #include <string>
+#include <cstdint>
 
 #if not defined(__clang__)
 struct Address {

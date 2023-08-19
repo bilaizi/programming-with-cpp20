@@ -1,17 +1,17 @@
 # Copyright (c) Andreas Fertig.
 # SPDX-License-Identifier: MIT
 
-cmake_minimum_required(VERSION 3.16.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.26 FATAL_ERROR)
 
 set(CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 set(EXEC_NAME ${CMAKE_CURRENT_SOURCE_DIR})
 
 project(${EXEC_NAME} CXX)
 
 # build the filename
-get_filename_component(EXEC_NAME "${EXEC_NAME}" NAME)
+cmake_path(GET EXEC_NAME FILENAME EXEC_NAME)
 
 function(check_compiler COMPILER version)
     if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "${COMPILER}")

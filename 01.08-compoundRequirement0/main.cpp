@@ -33,6 +33,10 @@ requires(Args... args)
   { (... + args) } noexcept -> same_as<first_arg_t<Args...>>;
 }
 
+// Simple requirement (SR)
+// Nested requirement (NR)
+// Compound requirement (CR)
+// Type requirement (TR)
 
 auto add(Args&&... args)
 {

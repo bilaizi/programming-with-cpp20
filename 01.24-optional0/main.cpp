@@ -45,9 +45,7 @@ struct NotCopyable {
 optional<NotCopyable> a{};
 optional<NotCopyable> b = a;  // #B This should fail
 
-
-
 int main()
 {
-  static_assert(std::is_copy_constructible_v<optional<NotCopyable>>);
+    static_assert(std::is_copy_constructible_v<optional<NotCopyable>>);
 }

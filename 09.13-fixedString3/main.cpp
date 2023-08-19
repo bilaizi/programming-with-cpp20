@@ -4,6 +4,7 @@
 #include <version>
 
 #include <algorithm>
+#include <cstdio>
 #include <cstddef>
 #include <span>
 
